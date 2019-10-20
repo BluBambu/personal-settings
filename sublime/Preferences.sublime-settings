@@ -1,0 +1,38 @@
+{
+	// These settings require the installation of:
+	//     - Package Control: https://packagecontrol.io/installation
+	//     - Brogrammer Theme: https://packagecontrol.io/packages/Theme%20-%20Brogrammer
+	//     - Material Theme: https://packagecontrol.io/packages/Material%20Theme
+	//     - Material Theme - Appbar: https://packagecontrol.io/packages/Material%20Theme%20-%20Appbar
+
+	// Color scheme
+  	"color_scheme": "Packages/Theme - Brogrammer/brogrammer.tmTheme",
+
+    // Editor theme
+	"theme": "Material-Theme.sublime-theme",
+	"material_theme_small_tab": true ,
+
+	// General settings
+	"tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+	"font_size": 12,
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"overlay_scroll_bars": "enabled",
+	"always_show_minimap_viewport": true,
+	"font_options": // High resolution
+	[
+		"gray_antialias",
+		"subpixel_antialias"
+	],
+	"indent_guide_options": // Highlight current selection
+	[
+		"draw_normal",
+		"draw_active"
+	],
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+}
