@@ -1,4 +1,4 @@
 # SublimeSettings
 My sublime settings:
 
-![Screenshot](/screenshot.PNG)
+![sublime_code_snippet](../resources/sublime_snippet.png)
