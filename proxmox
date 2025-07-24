@@ -1,0 +1,24 @@
+```
+lvs
+lvcreate -V 100G -T storage/storage -n shared_media
+mkfs.ext4 /dev/storage/shared_media
+mkdir -p /mnt/shared-media
+mount /dev/storage/shared_media /mnt/shared-media
+echo "/dev/storage/shared_media /mnt/shared_media ext4 defaults 0 2" >> /etc/fstab
+
+# Give unpriviledged containers access
+chown 100000:100000 /mnt/shared_media
+chmod 755 /mnt/shared_media
+
+# Bind mount to each container
+nano /etc/pve/lxc/<CTID>.conf
+
+# Use mp1, mp2, etc., if mp0 is already in use.
+mp0: /mnt/shared_media,mp=/shared_media
+
+pct restart <CTID1>
+
+# Verify access in each container
+ls /shared
+touch /shared/test.txt
+```
